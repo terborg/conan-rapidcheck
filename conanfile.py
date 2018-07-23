@@ -14,7 +14,7 @@ class RapidCheckConan(ConanFile):
     generators = "cmake"
 
     def source(self):
-        self.run( "git clone https://github.com/emil-e/rapidcheck" )
+        self.run( "git clone --depth 1 https://github.com/emil-e/rapidcheck" )
         
         # This small hack might be useful to guarantee proper /MT /MD linkage
         # in MSVC if the packaged project doesn't have variables to set it
