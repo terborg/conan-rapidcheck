@@ -12,6 +12,8 @@ class RapidCheckConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     generators = "cmake"
+    
+    #requires = ( "gtest/1.8.0@bincrafters/stable" )
 
     def source(self):
         self.run( "git clone --depth 1 https://github.com/emil-e/rapidcheck" )
